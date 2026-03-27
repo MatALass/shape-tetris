@@ -1,2 +1,0 @@
-[console_scripts]
-shape-tetris = shape_tetris.main:main

@@ -1,26 +1,33 @@
-# Python
+# Python bytecode
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*$py.class
 
 # Virtual environments
 .venv/
 venv/
 env/
 
-# Test / tooling caches
+# Test / coverage / lint caches
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
 .coverage
+.coverage.*
 htmlcov/
 
-# OS / editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
 
 # Local save files
-*.save.json
 shape_tetris_save.json
+*.save.json
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
