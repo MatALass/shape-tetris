@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shape-tetris"
+version = "0.1.0"
+description = "Geometric puzzle placement game inspired by a Tetris-like academic brief."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Mathieu"}
+]
+dependencies = [
+  "pygame-ce>=2.5.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "ruff>=0.6.0",
+]
+
+[project.scripts]
+shape-tetris = "shape_tetris.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

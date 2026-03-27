@@ -1,0 +1,9 @@
+{
+  "window_width": 1280,
+  "window_height": 840,
+  "title": "Shape Tetris",
+  "default_shape": "circle",
+  "default_size": 21,
+  "default_block_mode": "random_three",
+  "save_path": "shape_tetris_save.json"
+}

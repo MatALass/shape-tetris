@@ -1,0 +1,12 @@
+{
+  "supported_shapes": [
+    "circle",
+    "diamond",
+    "triangle"
+  ],
+  "supported_sizes": [
+    21,
+    25,
+    31
+  ]
+}

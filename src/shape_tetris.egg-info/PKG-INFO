@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: shape-tetris
+Version: 0.1.0
+Summary: Geometric puzzle placement game inspired by a Tetris-like academic brief.
+Author: Mathieu
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame-ce>=2.5.2
+Provides-Extra: dev
+Requires-Dist: pytest>=8.2.0; extra == "dev"
+Requires-Dist: ruff>=0.6.0; extra == "dev"
+Dynamic: license-file
+
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
