@@ -42,8 +42,6 @@ This project focuses on:
 ![Menu](assets/screenshots/menu.png)
 ![Gameplay](assets/screenshots/gameplay.png)
 
-Replace these images with your actual screenshots.
-
 ---
 
 ## Why this project matters
