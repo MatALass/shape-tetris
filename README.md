@@ -1,60 +1,163 @@
 # Shape Tetris
 
-A geometric puzzle game built in **Python** with **pygame-ce**, inspired by an academic Tetris-like project and redesigned as a structured, testable, modern software project.
+> A geometric puzzle game in Python built with **pygame-ce**, featuring circle, diamond, and triangle boards, a clean architecture, and a fully testable game engine.
 
-Instead of falling tetrominoes in real time, the player strategically places blocks on a **geometric board** — **circle**, **diamond**, or **triangle** — to complete and clear rows and columns, maximize score, and survive as long as possible.
+---
+
+## Overview
+
+**Shape Tetris** is a strategic puzzle game inspired by a university project and redesigned into a modern, maintainable software product.
+
+Instead of real-time falling blocks, players **place shapes manually** on a **non-rectangular board** to complete and clear rows and columns.
+
+This project focuses on:
+- clean architecture
+- separation of concerns
+- testability
+- scalability
+
+---
 
 ## Features
 
-- 3 board shapes:
+- 3 geometric boards:
   - Circle
   - Diamond
   - Triangle
 - Strategic block placement gameplay
-- Block rotation
-- Row and column clearing
-- Score system
-- Save / load support
-- Two block selection modes:
-  - Random three
+- Block rotation system
+- Row & column clearing
+- Scoring system with combos
+- Save / Load system (JSON)
+- Two game modes:
+  - Random 3 blocks
   - Full catalog
-- Testable game engine separated from the UI
-- `src/` project layout
-- Automated tests with `pytest`
+- Fully testable game engine (pytest)
+- Clean architecture (domain / app / UI separation)
+
+---
 
 ## Why this project matters
 
-This project is not a basic Tetris clone.
+This is **not a simple Tetris clone**.
 
-It is a full redesign of an older academic assignment into a cleaner and more maintainable game project with:
-- a separated domain engine,
-- explicit game models,
-- testable rules,
-- a structured architecture,
-- and a real graphical interface.
+This project demonstrates:
+- how to turn a **basic academic project into a production-ready application**
+- how to design a **testable game engine**
+- how to structure a **Python project with long-term maintainability**
 
-The goal was to preserve the original idea — geometric boards, block placement, row/column clearing — while turning it into a more serious and defendable software project.
+---
 
-## Tech stack
+## Architecture
+
+The project follows a layered architecture:
+
+```
+shape-tetris/
+├─ src/shape_tetris/
+│  ├─ game/       # Core domain logic (pure Python)
+│  ├─ app/        # Application orchestration
+│  ├─ ui/         # Pygame rendering & input
+│  └─ main.py
+├─ tests/         # Unit tests
+```
+
+### Key design principles
+
+- **Core engine independent from UI**
+- **Data models clearly separated**
+- **Testable rules and scoring**
+- **No hidden global state**
+
+---
+
+## Tech Stack
 
 - Python 3.11+
 - pygame-ce
 - pytest
 - ruff
 
-## Project structure
+---
 
-```text
-shape-tetris/
-├─ assets/
-├─ configs/
-├─ docs/
-├─ src/
-│  └─ shape_tetris/
-│     ├─ app/
-│     ├─ game/
-│     ├─ ui/
-│     └─ main.py
-├─ tests/
-├─ pyproject.toml
-└─ README.md
+## Installation
+
+```bash
+git clone https://github.com/MatALass/shape-tetris.git
+cd shape-tetris
+py -m venv .venv
+.venv\Scripts\activate
+py -m pip install -e .[dev]
+```
+
+---
+
+## Run the game
+
+```bash
+shape-tetris
+```
+
+or
+
+```bash
+py -m shape_tetris.main
+```
+
+---
+
+## Run tests
+
+```bash
+py -m pytest
+```
+
+---
+
+## Controls
+
+### Menu
+- ↑ ↓ : navigate
+- ← → : change option
+- Enter : confirm
+- L : load save
+
+### In-game
+- Mouse : place blocks
+- 1 / 2 / 3 : select block
+- R : rotate clockwise
+- Shift + R / E : rotate counterclockwise
+- S : save
+- ESC : pause
+- Q : quit
+
+---
+
+## Roadmap
+
+### V1 (current)
+- Core gameplay
+- UI
+- Save/load
+- Tests
+
+### V1.1
+- UI polish
+- Better UX feedback
+- Improved scoring balance
+
+### V2
+- Animations
+- High scores
+- Themes
+- Sound design
+
+---
+
+## Demo 
+
+---
+
+## License
+
+MIT License
